@@ -17,6 +17,7 @@ This project was built for the **Redrob Ideathon (Challenge 1: The AI Systems Ar
 5. [Installation & Setup](#-installation--setup)
 6. [How to Run](#-how-to-run)
 7. [Future Roadmap](#-future-roadmap)
+8. [Demo Video](#-demo-video)
 
 ---
 
@@ -113,4 +114,7 @@ pip install fastapi uvicorn openai-whisper gtts python-multipart
 ## 🔮 Future Roadmap
 - **DPI Integration:** Linking with Aadhaar and DigiLocker for instant, document-free scheme applications.
 - **Read-Write Capabilities:** Moving from just *finding* schemes to actually *applying* for them on behalf of the user via RPA.
-- **WebSockets / Low-Latency Audio:** Upgrading from REST APIs to bidirectional streaming to achieve <500ms voice response times. 
+- **WebSockets / Low-Latency Audio:** Upgrading from REST APIs to bidirectional streaming to achieve <500ms voice response times.
+
+## Demo Video
+### [Click to see the working here:](https://drive.google.com/drive/folders/1h7-uB-zpBBxKAb4iJJHjq8bpMtfxS6Dl?usp=sharing)
