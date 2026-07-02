@@ -2,7 +2,6 @@
 
 ![Ideathon Track](https://img.shields.io/badge/Track-1%3A%20The%20AI%20Systems%20Architect-purple?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Prototype-success?style=for-the-badge)
-![Language](https://img.shields.io/badge/Language-Hindi-orange?style=for-the-badge)
 
 GovAssist is a **voice-first, autonomous AI system** designed to help Indian citizens (especially gig and blue-collar workers) discover and apply for government welfare schemes. By using a sophisticated **Planner–Executor–Evaluator** architecture, it replaces tedious manual web browsing and rule-reading with a simple, natural Hindi voice conversation.
 
