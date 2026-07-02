@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hindi Voice Agent</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      #chat {
+        margin-top: 20px;
+        padding: 10px;
+        border: 2px solid black;
+        width: 700px;
+        min-height: 100px;
+      }
+      audio {
+        display: block;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Hindi Voice Agent</h2>
+
+    <button onclick="startRecording()">🎤 Start</button>
+    <button onclick="stopRecording()">⏹ Stop</button>
+
+    <div id="status">Status: Waiting for voice input...</div>
+    <div id="chat"></div>
+
+    <script>
+      let recorder;
+      let audioChunks = [];
+
+      async function startRecording() {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+        });
+        recorder = new MediaRecorder(stream);
+        recorder.start();
+        audioChunks = [];
+        document.getElementById("status").innerText = "Recording...";
+
+        recorder.ondataavailable = (e) => audioChunks.push(e.data);
+      }
+
+      async function stopRecording() {
+        recorder.stop();
+        document.getElementById("status").innerText = "Processing...";
+
+        recorder.onstop = async () => {
+          const blob = new Blob(audioChunks, { type: "audio/wav" });
+          const formData = new FormData();
+          formData.append("file", blob, "input.wav");
+
+          const response = await fetch(
+            "http://127.0.0.1:8000/voice-agent/?lang=hi",
+            {
+              method: "POST",
+              body: formData,
+            }
+          );
+
+          const data = await response.json();
+          console.log("Backend response:", data);
+
+          const chatDiv = document.getElementById("chat");
+
+          chatDiv.innerHTML += `
+            <div style="margin:10px 0; padding:10px; border:1px solid #ccc">
+              <b>User:</b> ${data.user_text}
+            </div>
+
+            <div style="margin:10px 0; padding:10px; border:1px solid #4caf50">
+              <b>Agent:</b>
+              <p>${data.agent_text}</p>
+
+              <audio controls autoplay
+                src="http://127.0.0.1:8000/audio/${data.agent_audio}">
+              </audio>
+            </div>
+            `;
+
+          document.getElementById("status").innerText =
+            "Status: Waiting for voice input...";
+        };
+      }
+    </script>
+  </body>
+</html>

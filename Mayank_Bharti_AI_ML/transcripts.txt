@@ -1,0 +1,11 @@
+## Evaluation Transcript (Tabular Format)
+
+| User Input (Hindi)                  | Agent Response (Text)                                      | Tool Used                             | Notes                              |
+|-----------------------------------  |------------------------------------------------------------|---------------------------------------|------------------------------------|
+| मेरी उम्र पचास साल है                   | कृपया अपनी income बताएं।                                     | Planner                               | Age captured successfully          |
+| मेरी आय बताएं                         | कृपया अपनी आय बताएं।                                        | Planner                               | Missing info handled               |
+| मेरी आय दो लाख है                     | कृपया अपनी occupation बताएं।                                 | Planner                               | Income captured                    |
+| Input unclear / noisy audio          | माफ़ कीजिए, आपकी आवाज़ समझ नहीं आई। कृपया दोबारा बोलें।        | Whisper STT                           | Failure handling                   |
+| मैं शिक्षक हूँ                            | आप Ayushman Bharat के लिए पात्र हैं।                           | eligibility_tool                     | Correct eligibility                |
+| मैं किसान हूँ, आय 2 लाख                | आप किसी भी सरकारी योजना के लिए पात्र नहीं हैं।                    | eligibility_tool                     | No scheme eligible                 |
+| मैं किसान हूँ, आय 1 लाख                | आप PM Kisan और Ayushman Bharat के लिए पात्र हैं।               | eligibility_tool + scheme_info_tool  | Multiple schemes eligible          |
