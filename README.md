@@ -2,6 +2,7 @@
 
 ![Ideathon Track](https://img.shields.io/badge/Track-1%3A%20The%20AI%20Systems%20Architect-purple?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Prototype-success?style=for-the-badge)
+![Language](https://img.shields.io/badge/Language-Hindi-orange?style=for-the-badge)
 
 GovAssist is a **voice-first, autonomous AI system** designed to help Indian citizens (especially gig and blue-collar workers) discover and apply for government welfare schemes. By using a sophisticated **Planner–Executor–Evaluator** architecture, it replaces tedious manual web browsing and rule-reading with a simple, natural Hindi voice conversation.
 
@@ -10,17 +11,18 @@ This project was built for the **Redrob Ideathon (Challenge 1: The AI Systems Ar
 ---
 
 ## 📑 Table of Contents
-1. [The Problem & Vision](#the-problem--vision)
+1. [The Problem & Vision](#the-problem-vision)
 2. [Key Features](#key-features)
 3. [System Architecture](#system-architecture)
 4. [Folder Structure](#folder-structure)
-5. [Installation & Setup](#installation--setup)
+5. [Installation & Setup](#installation-setup)
 6. [How to Run](#how-to-run)
 7. [Future Roadmap](#future-roadmap)
 8. [Demo Video](#demo-video)
 
 ---
 
+<a id="the-problem-vision"></a>
 ## 🚨 The Problem & Vision
 Discovering eligibility for government welfare schemes in India is incredibly manual. Millions of eligible citizens miss out on life-changing benefits due to low digital literacy, language barriers, and complex rulebooks. 
 
@@ -28,6 +30,7 @@ GovAssist acts as an **Intelligent Co-pilot**. Instead of typing into complex po
 
 ---
 
+<a id="key-features"></a>
 ## ✨ Key Features
 - **Voice-Native Interaction:** End-to-end Hindi voice input (Whisper STT) and output (gTTS). No typing required.
 - **Agentic Loop (Not a Chatbot):** Driven by a Planner-Executor-Evaluator pattern for deterministic, safe decision-making.
@@ -37,6 +40,7 @@ GovAssist acts as an **Intelligent Co-pilot**. Instead of typing into complex po
 
 ---
 
+<a id="system-architecture"></a>
 ## 🧠 System Architecture
 
 The core of the system relies on an autonomous AI loop rather than simple prompt engineering:
@@ -46,6 +50,7 @@ The core of the system relies on an autonomous AI loop rather than simple prompt
 
 ---
 
+<a id="folder-structure"></a>
 ## 📂 Folder Structure
 
 ```text
@@ -72,6 +77,7 @@ RedRob_Ideathon_Track1/
 
 ---
 
+<a id="installation-setup"></a>
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
@@ -93,6 +99,7 @@ pip install fastapi uvicorn openai-whisper gtts python-multipart
 
 ---
 
+<a id="how-to-run"></a>
 ## 🚀 How to Run
 
 1. **Start the Backend Server**
@@ -111,10 +118,12 @@ pip install fastapi uvicorn openai-whisper gtts python-multipart
 
 ---
 
+<a id="future-roadmap"></a>
 ## 🔮 Future Roadmap
 - **DPI Integration:** Linking with Aadhaar and DigiLocker for instant, document-free scheme applications.
 - **Read-Write Capabilities:** Moving from just *finding* schemes to actually *applying* for them on behalf of the user via RPA.
 - **WebSockets / Low-Latency Audio:** Upgrading from REST APIs to bidirectional streaming to achieve <500ms voice response times.
 
+<a id="demo-video"></a>
 ## Demo Video
 ### [Click to see the working here:](https://drive.google.com/drive/folders/1h7-uB-zpBBxKAb4iJJHjq8bpMtfxS6Dl?usp=sharing)
