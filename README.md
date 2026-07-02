@@ -10,14 +10,14 @@ This project was built for the **Redrob Ideathon (Challenge 1: The AI Systems Ar
 ---
 
 ## 📑 Table of Contents
-1. [The Problem & Vision](#-the-problem--vision)
-2. [Key Features](#-key-features)
-3. [System Architecture](#-system-architecture)
-4. [Folder Structure](#-folder-structure)
-5. [Installation & Setup](#-installation--setup)
-6. [How to Run](#-how-to-run)
-7. [Future Roadmap](#-future-roadmap)
-8. [Demo Video](#-demo-video)
+1. [The Problem & Vision](#the-problem--vision)
+2. [Key Features](#key-features)
+3. [System Architecture](#system-architecture)
+4. [Folder Structure](#folder-structure)
+5. [Installation & Setup](#installation--setup)
+6. [How to Run](#how-to-run)
+7. [Future Roadmap](#future-roadmap)
+8. [Demo Video](#demo-video)
 
 ---
 
